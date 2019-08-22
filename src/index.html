@@ -10,24 +10,31 @@
 </head>
 
 <body>
-  <button id="addInterest">Add Interest</button>
-  <article id="interestContainer"></article>
-  <dialog id="interestDialog">
-    <label for="name">Name</label>
-    <input type="text" id="nameEdit">
-    <label for="place">Place</label>
-    <input type="text" id="placeEdit">
-    <label for="cost">Cost</label>
-    <input type="text" id="costEdit">
-    <label for="description">Description</label>
-    <input type="text" id="descriptionEdit">
-    <!-- <label for="review">Review</label>
-    <input type="text" id="reviewEdit"> -->
-    <button id="saveInterest">Save</button>
-    <button id="cancelInterest">Cancel</button>
-  </dialog>
-  
-  
+  <article id="progressContainer">
+    <h2>In Progress</h2>
+    <button id="addInterest">Add Interest</button>
+    <article id="interestContainer"></article>
+    <dialog id="interestDialog">
+      <h2>Make a New Interest</h2>
+      <label for="name">Name</label>
+      <input type="text" id="nameEdit">
+      <label for="place">Place</label>
+      <select name="place" id="placeEdit">
+      </select>
+      <label for="cost">Cost</label>
+      <input type="text" id="costEdit">
+      <label for="description">Description</label>
+      <input type="text" id="descriptionEdit">
+      <button id="saveInterest">Save</button>
+      <button id="cancelInterest">Cancel</button>
+    </dialog>
+  </article>
+  <article >
+    <h2>Completed</h2>
+    <section id="completedContainer"></section>
+  </article>
+
+
 </body>
 
 </html>

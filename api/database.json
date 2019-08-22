@@ -18,12 +18,20 @@
   ],
   "interests": [
     {
-      "id": 1,
-      "placeId": 1,
       "name": "Local Market",
+      "placeId": 1,
+      "cost": 0,
       "description": "Local market where you can purchase local products and try the local food",
-      "cost": 0.00,
-      "review": ""
+      "review": "",
+      "id": 1
+    },
+    {
+      "name": "rth",
+      "placeId": 2,
+      "cost": 5555,
+      "description": "sdfg",
+      "review": "",
+      "id": 2
     }
   ]
 }

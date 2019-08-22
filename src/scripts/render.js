@@ -1,15 +1,27 @@
 import factory from "./factory.js"
 
 
-const interestContainer = document.querySelector("#interestContainer")
-const renderInterest = (interestArray) => {
-    interestContainer.innerHTML = ""
+
+const renderInterestEdit = (interest, domLocation, createFunction) => {
+    domLocation.innerHTML = ""
+        const convertedEntry = createFunction(interest)
+        domLocation.innerHTML += convertedEntry
+}
+
+const renderInterest = (interest, domLocation, createFunction) => {
+    const convertedEntry = createFunction(interest)
+    domLocation.innerHTML += convertedEntry
+}
+
+const interestDropdown = document.querySelector("#placeEdit")
+const renderDropdown = (interestArray) => {
+    interestDropdown.innerHTML = ""
     interestArray.forEach(interestObject => {
-        const convertedEntry = factory.createInterestHTML(interestObject)
-        interestContainer.innerHTML += convertedEntry
+        const convertedEntry = factory.makeDropdown(interestObject)
+        interestDropdown.innerHTML += convertedEntry
     });
 }
 
 export default {
-    renderInterest
+    renderInterest, renderDropdown,renderInterestEdit
 }

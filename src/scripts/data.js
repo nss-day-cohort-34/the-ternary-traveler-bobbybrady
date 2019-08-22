@@ -3,6 +3,10 @@ const getAllInterests = () => {
     .then(entries => entries.json())
 }
 
+const getAllPlaces = () => {
+    return fetch("http://localhost:8088/places")
+    .then(entries => entries.json())
+}
 const saveInterest = (interestObject) => {
     return fetch("http://localhost:8088/interests", {
         method: "POST",
@@ -13,6 +17,18 @@ const saveInterest = (interestObject) => {
     })
 }
 
+const editInterest = (ID, updatedObject) => {
+    return fetch(`http://localhost:8088/interests/${ID}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(updatedObject)
+    }).then(data => data.json())
+        .then(() => {
+        })
+}
+
 export default {
-    getAllInterests, saveInterest
+    getAllInterests, saveInterest, getAllPlaces, editInterest
 }
