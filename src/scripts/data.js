@@ -29,6 +29,17 @@ const editInterest = (ID, updatedObject) => {
         })
 }
 
+const addPlace = (interestObject) => {
+    return fetch("http://localhost:8088/places", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(interestObject)
+    })
+}
+
+
 const deleteInterest = (entryID) => {
     return fetch(`http://localhost:8088/interests/${entryID}`,
         {
@@ -39,5 +50,5 @@ const deleteInterest = (entryID) => {
 }
 
 export default {
-    getAllInterests, saveInterest, getAllPlaces, editInterest, deleteInterest
+    getAllInterests, saveInterest, getAllPlaces, editInterest, deleteInterest, addPlace
 }

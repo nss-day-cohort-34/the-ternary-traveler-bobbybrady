@@ -38,6 +38,13 @@ const reviewEditDialog = document.querySelector("#reviewEdit")
 const saveInterest = document.querySelector("#saveInterest")
 const cancelInterest = document.querySelector("#cancelInterest")
 const progressContainer = document.querySelector("#progressContainer")
+const addPlace = document.querySelector("#addPlace")
+const addPlaceDialog = document.querySelector("#addPlaceDialog")
+const inpputPlace = document.querySelector("#newPlace")
+const visa = document.querySelector("#visa")
+const saveNewPlace = document.querySelector("#addPlaceSave")
+const cancelNewPlace = document.querySelector("#addPlaceCancel")
+
 
 addInterestButton.addEventListener("click", () => {
     render.renderDropdown(allPlaces)
@@ -170,5 +177,27 @@ completedContainer.addEventListener("click", () => {
     if (event.target.id.startsWith("noButton")) {
         deleteDialog.close()
     }
+})
+
+addPlace.addEventListener("click", () => {
+    addPlaceDialog.showModal()
+})
+
+saveNewPlace.addEventListener("click", () => {
+    const visaValue = new Boolean(visa.value)
+    const newPlace = inpputPlace.value
+    const newPlaceObject = factory.makePlaceObject(newPlace, visaValue)
+    data.addPlace(newPlaceObject).then(() => {
+        data.getAllPlaces().then(data => {
+            allPlaces = data
+            visa.value = ""
+            inpputPlace.value = ""
+        })
+    })
+    addPlaceDialog.close()
+})
+
+cancelNewPlace.addEventListener("click", () => {
+    addPlaceDialog.close()
 })
 

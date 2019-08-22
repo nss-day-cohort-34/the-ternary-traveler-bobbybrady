@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Faster+One&display=swap');
+
+body {
+    background-color: #FFEEE4;
+}
+
+.headline {
+  background: linear-gradient(90deg, rgba(194, 162, 121, 0.6), rgba(33,33,33, 0.6)),url(https://i0.wp.com/windowscustomization.com/wp-content/uploads/2018/09/rotating-earth.gif?fit=750%2C341&quality=80&strip=all&ssl=1) -80px -80px;
+  color: red;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  font-weight: bold;
+  font-size: 100px;
+  font-family: 'Faster One', cursive;
+  width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.flexContainer {
+    display: flex;  
+    justify-content: center;
+}
+
+.flexedContainer {
+    flex-direction: row;
+    flex-basis: 40%;
+    margin: 25px;
+}
+
+.interest {
+    padding: 15px;
+    border: solid black 1px;
+    margin: 5px 5px 15px 5px;
+    transition: 0.4s;
+    border-radius: 4px;
+}
+
+.hidden {
+    opacity: 0;
+    transition: 0.4s;
+}
+.interest:hover {
+    background-color: #CE6D39;
+    color: #FFEEE4;
+    transition: 0.4s;
+    box-shadow: black 5px 5px 9px;
+}
+
+.interest:hover .hidden{
+    opacity: 1;
+    transition: 0.4s;
+}
+
+.button {
+    background-color: black;
+    color: #F17F42;
+    border-radius: 4px;
+}
+
+.addInterest {
+    text-align: center;
+}
+
+.dialog {
+    background-color: #CE6D39;
+    color: #FFEEE4;
+    border-radius: 4px;
+}
+
+.deleteButton {
+    margin-left: 37%
+}
+
+.Add {
+    font-size: 25px;
+    padding: 4px;
+    margin: 4px;
+}
