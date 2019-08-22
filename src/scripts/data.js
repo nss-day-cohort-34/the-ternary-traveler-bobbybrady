@@ -29,6 +29,15 @@ const editInterest = (ID, updatedObject) => {
         })
 }
 
+const deleteInterest = (entryID) => {
+    return fetch(`http://localhost:8088/interests/${entryID}`,
+        {
+            method: "DELETE",
+
+        })
+        .then(data => data.json())
+}
+
 export default {
-    getAllInterests, saveInterest, getAllPlaces, editInterest
+    getAllInterests, saveInterest, getAllPlaces, editInterest, deleteInterest
 }
