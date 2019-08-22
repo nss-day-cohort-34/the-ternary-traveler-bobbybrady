@@ -1,0 +1,42 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Italy",
+      "visa_required": false
+    },
+    {
+      "id": 2,
+      "name": "Switzerland",
+      "visa_required": true
+    },
+    {
+      "id": 3,
+      "name": "France",
+      "visa_required": false
+    },
+    {
+      "name": "sdfg",
+      "visa_required": true,
+      "id": 4
+    }
+  ],
+  "interests": [
+    {
+      "name": "Local Market",
+      "placeId": 1,
+      "cost": 876,
+      "description": "Local market where you can purchase local products and try the local food",
+      "review": "",
+      "id": 1
+    },
+    {
+      "name": "rth",
+      "placeId": 2,
+      "cost": 5555,
+      "description": "sdfg",
+      "review": "",
+      "id": 2
+    }
+  ]
+}
