@@ -22,6 +22,8 @@ const renderDropdown = (interestArray) => {
     });
 }
 
+
+
 export default {
-    renderInterest, renderDropdown,renderInterestEdit
+    renderInterest, renderDropdown,renderInterestEdit,
 }

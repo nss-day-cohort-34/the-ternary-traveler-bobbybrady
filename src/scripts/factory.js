@@ -45,6 +45,25 @@ const createInterestEditHTML = (interestObject) => {
 </section>`
 }
 
+const completedInterestEditHTML = (interestObject) => {
+    return `<section id="interestEditFlex--${interestObject.id}" class = "completeEditFlex">
+        <label for="name">Name</label>
+        <input type="text" id="interestName--${interestObject.id}">
+        <h4 id="interestPlace--${interestObject.id}">${interestObject.place.name}</h4>
+        <label for="cost">Cost</label>
+        <input type="text" id="interestCost--${interestObject.id}">
+        <br>
+        <br>
+        <label for="Description">Description</label>
+        <input type="text" id="interestDescription--${interestObject.id}">
+        <br>
+        <br>
+        <label for="review">Review</label>
+        <input type="text" id="interestReview--${interestObject.id}">
+        <button id="editSaveInterest--${interestObject.id}" class="button">Save</button>
+        <button id="cancelEditInterest--${interestObject.id}" class="button">Cancel</button>
+</section>`
+}
 export default {
-    createInterestHTML, makeInterestObject, makeDropdown, createInterestEditHTML, makePlaceObject
+    createInterestHTML, makeInterestObject, makeDropdown, createInterestEditHTML, makePlaceObject, completedInterestEditHTML
 }

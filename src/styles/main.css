@@ -77,3 +77,7 @@ body {
     padding: 4px;
     margin: 4px;
 }
+
+.completeEditFlex {
+    flex-direction: column;
+}

@@ -106,11 +106,15 @@ completedContainer.addEventListener("click", () => {
         const getOneInterest = allInterests.find(interest => interest.id === parseInt(id))
         const newLocation = `#interestFlex--${id}`
         const newLocationDom = document.querySelector(newLocation)
-        render.renderInterestEdit(getOneInterest, newLocationDom, factory.createInterestEditHTML)
+        render.renderInterestEdit(getOneInterest, newLocationDom, factory.completedInterestEditHTML)
         const cost = document.querySelector(`#interestCost--${id}`)
         const review = document.querySelector(`#interestReview--${id}`)
+        const name = document.querySelector(`#interestName--${id}`)
+        const description = document.querySelector(`#interestDescription--${id}`)
         cost.value = getOneInterest.cost
         review.value = getOneInterest.review
+        name.value = getOneInterest.name
+        description.value = getOneInterest.description
     }
 })
 
@@ -120,7 +124,9 @@ completedContainer.addEventListener("click", () => {
         const getOneInterest = allInterests.find(interest => interest.id === parseInt(id))
         const cost = document.querySelector(`#interestCost--${id}`)
         const review = document.querySelector(`#interestReview--${id}`)
-        const newInterestObject = factory.makeInterestObject(getOneInterest.name, getOneInterest.placeId, parseInt(cost.value), getOneInterest.description, review.value)
+        const name = document.querySelector(`#interestName--${id}`)
+        const description = document.querySelector(`#interestDescription--${id}`)
+        const newInterestObject = factory.makeInterestObject(name.value, getOneInterest.place.id, parseInt(cost.value), description.value, review.value)
         data.editInterest(id, newInterestObject).then(() => {
             getAndRender()
         })
